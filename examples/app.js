@@ -17,12 +17,25 @@ const Config = require("../examples/config.json");
 
         let scraper = new Scrape(Config);
 
-        let messages = await scraper.requestMessages();
-        let html = Scrape.formatHTML(messages, outputFile);
+        let messages = scraper.requestMessages().then(() => {
 
-        fs.writeFileSync(outputFile, html);
+            // Validate before anything
+            Scrape.validate(messages);
 
-        console.log("Saved in examples/messages.html");
+            // Get stats of Messages
+            let stats = Scrape.getStats(messages);
+
+            // Get List of Images
+            let images = Scrape.getImages(messages);
+
+            // Get List of Chats
+            let chats = Scrape.getChats(messages);
+
+            // Output Images to HTML file
+            let html = Scrape.formatImagesHTML(messages, outputFile);
+            fs.writeFileSync(outputFile, html);
+
+        });
 
     } catch (error) {
         console.error(error);

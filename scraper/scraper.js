@@ -129,13 +129,22 @@ class Scrape {
 
     }
 
-    static formatHTML(data) {
+    static getStats(messages) {
+        // Todo
+        return {};
+    }
 
-        /*
-         * Validate
-         */
+    static getImages(messages) {
+        // Todo
+        return [];
+    }
 
-        Scrape.validate(data);
+    static getChats(messages) {
+        // Todo
+        return [];
+    }
+
+    static formatImagesHTML(data) {
 
         data = data.payload;
 

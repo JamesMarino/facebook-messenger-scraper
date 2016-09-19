@@ -1,18 +1,15 @@
 {
-  "name": "messenger-scraper",
+  "name": "facebook-messenger-scraper",
   "version": "1.0.0",
-  "description": "",
+  "description": "Scrapes Group Chat Messages and Outputs in various formats",
   "main": "scraper.js",
-  "scripts": {
-    "build": "babel -d ./build ./examples -s"
-  },
   "author": "James Marino",
   "license": "ISC",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/JamesMarino/FBMessengerScraper.git"
+  },
   "dependencies": {
     "moment": "^2.14.1"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.14.0",
-    "babel-preset-es2017": "^6.14.0"
   }
 }
