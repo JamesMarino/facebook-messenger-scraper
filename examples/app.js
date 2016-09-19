@@ -17,7 +17,7 @@ const Config = require("../examples/config.json");
 
         let scraper = new Scrape(Config);
 
-        let messages = scraper.requestMessages().then(() => {
+        scraper.requestMessages().then((messages) => {
 
             // Validate before anything
             Scrape.validate(messages);
