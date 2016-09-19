@@ -9,7 +9,7 @@ const fs = require("fs");
 const Scrape = require("../scraper/scraper");
 const Config = require("../examples/config.json");
 
-(async () => {
+(() => {
 
     const outputFile = "./examples/messages.html";
 
@@ -35,6 +35,8 @@ const Config = require("../examples/config.json");
             let html = Scrape.formatImagesHTML(messages, outputFile);
             fs.writeFileSync(outputFile, html);
 
+        }).catch((error) => {
+            console.error(error);
         });
 
     } catch (error) {
