@@ -1,8 +1,8 @@
 {
   "name": "facebook-messenger-scraper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Scrapes Group Chat Messages and Outputs in various formats",
-  "main": "scraper.js",
+  "main": "scraper/scraper.js",
   "author": "James Marino",
   "license": "ISC",
   "repository": {
