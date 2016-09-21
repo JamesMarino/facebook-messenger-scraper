@@ -7,6 +7,11 @@ Get Config Details from `/ajax/mercury/delivery_receipts.php` AJAX call for grou
 * MESSAGE_COUNT - no larger than 17500
 * MESSAGE_START - 2015-9-10 (Year, Month, Day) - North American Format
 
+## Instalation
+https://www.npmjs.com/package/facebook-messenger-scraper
+
+`npm install --save facebook-messenger-scraper`
+
 ## Example
 
     const fs = require("fs");
